@@ -1,3 +1,44 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Button = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+Button.Name = "Spoofer"
+Button.Parent = ScreenGui
+Button.Position = UDim2.new(0, 10, 0.95, 0)
+Button.Size = UDim2.new(0, 100, 0, 30)
+Button.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
+Button.Text = "Spoof Level"
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Button.MouseButton1Click:Connect(function()
+    local player = game:GetService("Players").LocalPlayer
+    player.ReplicatedData.level.Value = 450
+end)
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local Button = Instance.new("TextButton")
+
+ScreenGui.Parent = game.CoreGui
+
+Button.Name = "TpButton"
+Button.Parent = ScreenGui
+Button.Position = UDim2.new(0.95, -100, 0.95, 0) 
+Button.Size = UDim2.new(0, 100, 0, 30)
+Button.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
+Button.Text = "TP To boss Raids"
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Button.MouseButton1Click:Connect(function()
+local TeleportService = game:GetService("TeleportService")
+local gameId = 119359147980471
+TeleportService:Teleport(gameId)
+end)
+
+
+
+
 if table.find({119359147980471, 10450270085}, game.PlaceId) then
     return
 end
@@ -62,25 +103,6 @@ if game.Players.LocalPlayer.PlayerGui:FindFirstChild("DVDBounce") then
     end)
 
 
-    local ScreenGui = Instance.new("ScreenGui")
-    local Button = Instance.new("TextButton")
-    
-    ScreenGui.Parent = game.CoreGui
-    
-    Button.Name = "TpButton"
-    Button.Parent = ScreenGui
-    Button.Position = UDim2.new(0.95, -100, 0.95, 0) 
-    Button.Size = UDim2.new(0, 100, 0, 30)
-    Button.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
-    Button.Text = "TP To boss Raids"
-    Button.TextColor3 = Color3.fromRGB(255, 255, 255)
-    
-    Button.MouseButton1Click:Connect(function()
-    local TeleportService = game:GetService("TeleportService")
-    local gameId = 119359147980471
-    TeleportService:Teleport(gameId)
-end)
-
 
 
 
@@ -103,23 +125,7 @@ TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 
 
 
-local ScreenGui = Instance.new("ScreenGui")
-local Button = Instance.new("TextButton")
 
-ScreenGui.Parent = game.CoreGui
-
-Button.Name = "Spoofer"
-Button.Parent = ScreenGui
-Button.Position = UDim2.new(0, 10, 0.95, 0)
-Button.Size = UDim2.new(0, 100, 0, 30)
-Button.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
-Button.Text = "Spoof Level"
-Button.TextColor3 = Color3.fromRGB(255, 255, 255)
-
-Button.MouseButton1Click:Connect(function()
-    local player = game:GetService("Players").LocalPlayer
-    player.ReplicatedData.level.Value = 450
-end)
 
 
 
