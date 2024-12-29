@@ -1,3 +1,9 @@
+if table.find({119359147980471, 10450270085}, game.PlaceId) then
+    return
+end
+
+-- your script goes here below
+
 local playerGui = game:GetService("Players").LocalPlayer.PlayerGui
 
 -- delete everything except these
