@@ -39,7 +39,7 @@ end)
 
 
 
-if table.find({119359147980471, 10450270085, 16379688837}, game.PlaceId) then
+if table.find({119359147980471, 10450270085,}, game.PlaceId) then
     return
 end
 
@@ -47,14 +47,7 @@ end
 
 local playerGui = game:GetService("Players").LocalPlayer.PlayerGui
 
--- delete everything except these
-for _, item in pairs(playerGui:GetChildren()) do
-    if item.Name ~= "ANGIntro" and item.Name ~= "Loot" and item.Name ~= "ReadyScreen" then
-        item:Destroy()
-    end
-end
 
--- delete specific teleport frame
 if playerGui.ReadyScreen and playerGui.ReadyScreen.Frame and playerGui.ReadyScreen.Frame:FindFirstChild("Teleport") then
     playerGui.ReadyScreen.Frame.Teleport:Destroy()
 end
