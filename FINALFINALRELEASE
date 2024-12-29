@@ -1,3 +1,20 @@
+local playerGui = game:GetService("Players").LocalPlayer.PlayerGui
+
+-- delete everything except these
+for _, item in pairs(playerGui:GetChildren()) do
+    if item.Name ~= "ANGIntro" and item.Name ~= "Loot" and item.Name ~= "ReadyScreen" then
+        item:Destroy()
+    end
+end
+
+-- delete specific teleport frame
+if playerGui.ReadyScreen and playerGui.ReadyScreen.Frame and playerGui.ReadyScreen.Frame:FindFirstChild("Teleport") then
+    playerGui.ReadyScreen.Frame.Teleport:Destroy()
+end
+
+
+
+
 if game.Players.LocalPlayer.PlayerGui:FindFirstChild("DVDBounce") then
     game.Players.LocalPlayer.PlayerGui.DVDBounce:Destroy()
     end
@@ -101,6 +118,12 @@ end)
 
 
 
+
+
+
+
+
+
 --- Main Script ---
 
 
@@ -112,6 +135,16 @@ local player = game:GetService("Players").LocalPlayer
 local character = player.Character
 character:PivotTo(workspace.Objects.Spawns.BossSpawn:GetPivot())
 
+
+wait(0.2)
+
+local player = game:GetService("Players").LocalPlayer
+local character = player.Character
+character:PivotTo(workspace.Objects.Spawns.BossSpawn:GetPivot())
+
+local player = game:GetService("Players").LocalPlayer
+local character = player.Character
+character:PivotTo(workspace.Objects.Spawns.BossSpawn:GetPivot())
 
 
 local plr = game:GetService("Players").LocalPlayer
